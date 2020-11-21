@@ -422,10 +422,17 @@ var SegundoParcialLabo3;
                 if (listaVehiculosHtml[index].childNodes[0].textContent === id) {
                     var celda = listaVehiculosHtml[index];
                     tabla.removeChild(celda);
-                    listaVehiculos.splice(index, 1);
+                    // listaVehiculos.splice(index,1);
                     console.log(listaVehiculos);
                     divModificar.hidden = true;
-                    return true;
+                    // return true;
+                }
+            }
+            for (var i = 0; i < listaVehiculos.length; i++) {
+                console.log(listaVehiculos[i].id);
+                console.log(idNumber);
+                if (listaVehiculos[i].id === idNumber) {
+                    listaVehiculos.splice(i, 1);
                 }
             }
         });
