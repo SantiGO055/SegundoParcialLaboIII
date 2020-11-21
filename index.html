@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo parcial labo 3</title>
+    <script src="Vehiculo.js"></script>
+    <script src="Auto.js"></script>
+    <script src="Camioneta.js"></script>
+    <script src="funciones.js"></script>
+    <link rel="stylesheet" href="css/style.css"></link>
+
+
+    
+</head>
+<body id="body">
+    <!-- <input type="button" id="btnAgregarGato" value="Click"> -->
+    
+    <div id="promedio" class="promedio">
+        <label id="labelPromedio" for="inputPromedio" >Promedio: </label>
+        <input type="text" id="inputPromedio" name="inputPromedio" class="inputSinError" disabled>
+        <input type="button" id="btnCalcularPromedio" class="btnCalcularPromedio" value="Calcular Promedio">
+    </div>
+    <div id="div">
+        <div class="divSelect" class="divSelect">
+            <select name="select" id="select">
+                <option value="" selected>Seleccione un vehiculo</option> 
+                <option value="Auto" id="selectAuto">Auto</option> 
+                <option value="Camioneta" id="selecCamioneta" >Camioneta</option>
+            </select>
+            <select name="selectFilter" id="selectFilter" class="selectFilter" hidden>
+                <option value="" selected>Seleccione un auto a filtrar</option> 
+                <option value="Auto" id="selectAutoFilter">Auto</option> 
+                <option value="Camioneta" id="selectCamionetaFilter" >Camioneta</option>
+            </select>
+        </div>
+
+        <div class="agregarVehiculo" id="agregarVehiculo" hidden>
+            <h3 id="titulo" class="titulo"></h3>
+            
+
+            <label id="labelID" for="inputID" >ID:</label>
+            <input type="number" id="inputID" name="inputID" class="inputSinError" disabled>
+
+            <!-- Vehiculo(id, marca, modelo, precio), Auto(cantidadPuertas) y
+Camioneta(cuatroXcuatro) -->
+            <label id="labelMarca" for="inputMarca">Marca:</label>
+            <input type="text" id="inputMarca" name="inputMarca" class="inputSinError">
+
+            <label id="labelModelo" for="inputModelo">Modelo:</label>
+            <input type="text" id="inputModelo" name="inputModelo" class="inputSinError">
+
+            <label id="labelPrecio" for="inputPrecio">Precio:</label>
+            <input type="number" id="inputPrecio" name="inputPrecio" class="inputSinError">
+
+            <label id="labelDetalle" for="inputDetalle">Detalle:</label>
+            <input type="text" id="inputDetalle" name="inputDetalle" class="inputSinError">
+
+            <select name="selectTraccion" id="selectTraccion" class="selectTraccion" hidden>
+                <option value="Si" selected>Si</option> 
+                <option value="No" selected>No</option> 
+            </select>
+            <input type="button" id="btnAgregar" class="btnAgregar" value="Agregar a la lista">
+        </div>
+        
+    </div>
+    <div id="divCampos" class="divCampos" hidden>
+        <!-- <label for="nombre">Nombre:</label> -->
+        <input name="id" class="inputSinError" id="id" type="text" tabindex="1" disabled/>
+        <input name="marca" class="inputSinError" id="marca" type="text" tabindex="2"placeholder="Marca..." />
+        
+        <!-- <label for="apellido">Detalle:</label> -->
+        <input name="modelo" class="inputSinError" id="modelo" type="text" tabindex="3" placeholder="Modelo..." />
+        <input name="precio" class="inputSinError" id="precio" type="text" tabindex="4" placeholder="Precio..." />
+        <input name="detalle" class="inputSinError" id="detalle" type="text" tabindex="5" placeholder="Caracteristica..." />
+    
+        <div class="botones">
+            <input name="guardar" class="botonEliminar" id="botonEliminar" type="button" tabindex="5" value="Eliminar"/>
+            <input name="guardar" class="botonModificar" id="botonModificar" type="button" tabindex="5" value="Modificar"/>
+        </div>
+    </div>
+        
+    
+<!-- <div id="divNotificacion" class="divNotificacion notificacionSinError">asd </div> -->
+    
+
+    <table class="tabla" id="tabla">
+        
+        <thead>
+            <tr>
+                <!-- columnas: -->
+                <th>ID</th> 
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Detalle</th>
+                <th>Tipo</th>
+
+            </tr>
+
+        </thead>
+        <tbody id="tcuerpo">
+            
+            
+
+        </tbody>
+        <tfoot>
+
+
+        </tfoot>
+
+    </table>
+
+    
+
+    <table class="tablaFiltrada" id="tablaFiltrada" hidden>
+        <h3 class="h3ListaFiltrada" id="h3ListaFiltrada" hidden>Lista Filtrada</h3>
+        <thead>
+            <tr>
+                <!-- columnas: -->
+                <th>ID</th> 
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Detalle</th>
+                <th>Tipo</th>
+
+            </tr>
+
+        </thead>
+        <tbody id="tcuerpoFiltrado">
+            
+            
+
+        </tbody>
+        <tfoot>
+
+
+        </tfoot>
+
+    </table>
+    
+</body>
+</html>

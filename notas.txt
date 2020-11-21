@@ -1,0 +1,3 @@
+tsc -p ./ -w
+
+reduce promedio de todos los vehiculos sobre la lista filtrada
